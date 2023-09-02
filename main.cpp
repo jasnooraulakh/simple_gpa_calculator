@@ -5,6 +5,7 @@ using namespace std;
 
 
 void intro();
+void printResult();
 
 int main() {
     int totalMarks = 0, obtainMarks = 0;
@@ -56,4 +57,8 @@ void intro() {
     cout << "-------------------------------" << endl;
     cout << "---Welcome to GPA Calculator---" << endl;
     cout << "-------------------------------" << endl;
+}
+
+void printResult() {
+
 }

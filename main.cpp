@@ -3,14 +3,19 @@
 #include <iomanip>
 using namespace std;
 
+
+void intro();
+
 int main() {
     int totalMarks = 0, obtainMarks = 0;
     double percent = 0.00, gpa = 0.00;
     string grade;
 
-    cout << "Enter your Total Marks" << endl;
+    intro();
+
+    cout << "Enter your Total Marks:" << endl;
     cin >> totalMarks;
-    cout << "Enter your Obtained Marks" << endl;
+    cout << "Enter your Obtained Marks:" << endl;
     cin >> obtainMarks;
 
     if (obtainMarks <= totalMarks) {
@@ -45,4 +50,10 @@ int main() {
     cout << fixed << setprecision(2) << "Percentage: " << percent << endl;
     cout << fixed << setprecision(2) << "GPA: " << gpa << endl;
     return 0;
+}
+
+void intro() {
+    cout << "-------------------------------" << endl;
+    cout << "---Welcome to GPA Calculator---" << endl;
+    cout << "-------------------------------" << endl;
 }

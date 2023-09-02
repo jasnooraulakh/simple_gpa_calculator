@@ -7,9 +7,12 @@ using namespace std;
 void intro();
 void printResult(string gradeLetter, double percentage, double gpaPoint);
 
+
 int main() {
-    int totalMarks = 0, obtainMarks = 0;
-    double percent = 0.00, gpa = 0.00;
+    int totalMarks = 0;
+    int obtainMarks = 0;
+    double percent = 0.00;
+    double gpa = 0.00;
     string grade;
 
     intro();
@@ -50,12 +53,14 @@ int main() {
     return 0;
 }
 
+
 void intro() {
     cout << "-------------------------------" << endl;
     cout << "---Welcome to GPA Calculator---" << endl;
     cout << "-------------------------------" << endl;
     cout << endl;
 }
+
 
 void printResult(string gradeLetter, double percentage, double gpaPoint) {
     cout << "----------------------" << endl;

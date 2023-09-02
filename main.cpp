@@ -1,3 +1,8 @@
+// Author: Jasnoor Aulakh
+// Date: 2023-09-02
+// Simple GPA Calculator
+
+
 #include <iostream>
 #include <string>
 #include <iomanip>

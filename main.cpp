@@ -1,10 +1,11 @@
 #include <iostream>
 #include <string>
+#include <iomanip>
 using namespace std;
 
 int main() {
-    int totalMarks, obtainMarks;
-    float percent, gpa;
+    int totalMarks = 0, obtainMarks = 0;
+    double percent = 0.00, gpa = 0.00;
     string grade;
 
     cout << "Enter your Total Marks" << endl;
@@ -13,33 +14,35 @@ int main() {
     cin >> obtainMarks;
 
     if (obtainMarks <= totalMarks) {
-        percent = (float(obtainMarks) / float(totalMarks)) * 100;
+        percent = (double(obtainMarks) / double(totalMarks)) * 100;
     } else {
         cout << "Incorrect data entered.";
     }
 
     if (percent > 0) {
-        if (percent >= 90) {
+        if (percent >= 90.00) {
             gpa = 4.00;
             grade = "A";
-        } else if ((percent >= 80) && (percent <= 89)) {
+        } else if ((percent >= 80.00) && (percent <= 89.00)) {
             gpa = 3.00;
             grade = "B";
-        } else if ((percent >= 70) && (percent <= 79)) {
+        } else if ((percent >= 70.00) && (percent <= 79.00)) {
             gpa = 2.00;
             grade = "C";
-        }  else if ((percent >= 60) && (percent <= 69)) {
+        }  else if ((percent >= 60.00) && (percent <= 69.00)) {
             gpa = 1.00;
             grade = "D";
         }  else {
             gpa = 0.00;
             grade = "F";
         }
+    } else {
+        cout << "Error" << endl;
     }
 
     cout << "Your Result:-" << endl;
     cout << "Grade: " << grade << endl;
-    cout << "Percentage: " << percent << endl;
-    cout << "GPA: " << gpa << endl;
+    cout << fixed << setprecision(2) << "Percentage: " << percent << endl;
+    cout << fixed << setprecision(2) << "GPA: " << gpa << endl;
     return 0;
 }
